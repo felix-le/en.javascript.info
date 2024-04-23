@@ -1,44 +1,45 @@
-# An Introduction to JavaScript
+# Lời giới thiệu về JavaScript
 
-Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+Chúng ta hãy cùng tìm hiểu những điều đặc biệt về JavaScript, chúng ta có thể đạt được gì với nó, và những công nghệ có thể hoạt động tốt với nó.
 
-## What is JavaScript?
+## JavaScript là gì?
 
-*JavaScript* was initially created to "make web pages alive".
+_JavaScript_ nguyên bản được tạo ra để "giúp cho các website như được sống".
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Chương trình trong ngôn ngữ này được gọi là _scripts_. Chúng có thể được viết ngay trong HTML của trang web và chạy tự động khi trang tải.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Scripts được cung cấp và thực thi như văn bản thuần túy. Chúng không cần được đặc biệt chuẩn bị hoặc biên dịch để chạy.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+Khía cạnh này, JavaScript thực sự khác biệt so với ngôn ngữ khác được gọi là [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>).
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Tại sao nó gọi là <u>Java</u>Script?"
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Khi mà JavaScript được tạo ra, nó ban đầu có một cái tên khác: "LiveScript". Nhưng Java rất phổ biến vào thời điểm đó, vì vậy quyết định việc đặt một ngôn ngữ mới như là "em trai" của Java sẽ giúp ích.
+
+Nhưng khi phát triển, JavaScript đã trở thành một ngôn ngữ hoàn toàn độc lập với một đặc tả riêng gọi là ECMAScript, và hiện nay nó không còn liên quan gì đến Java nữa.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Ngày nay, JavaScript chạy không chỉ trên trình duyệt, mà còn trên máy chủ (server), hoặc thực sự trên bất kỳ thiết bị nào có một chương trình đặc biệt được gọi là [bộ máy JavaScript](https://en.wikipedia.org/wiki/JavaScript_engine).
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Trình duyệt có nhúng một bộ máy gọi là "máy ảo JavaScript".
 
-Different engines have different "codenames". For example:
+Sự khác biệt giữa các bộ máy "codenames". Ví dụ:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) -- trong Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- trong Firefox.
+- ...Và còn nhiều "codenames" khác như: "Chakra" cho IE, "JavaScriptCore", "Nitro" và "SquirrelFish" cho Safari, v.v.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+Các thuật ngữ trên đây nên nhớ vì chúng được sử dụng trong các bài viết của các nhà phát triển trên internet. Chúng ta cũng sẽ sử dụng chúng. Ví dụ, nếu "một tính năng X được hỗ trợ bởi V8", thì nó có thể hoạt động trên Chrome, Opera và Edge.
 
-```smart header="How do engines work?"
+```smart header="Bộ máy hoạt động như thế nào?"
 
-Engines are complicated. But the basics are easy.
+Bộ máy JavaScript là phần mềm phức tạp. Nhưng cơ bản thì nó rất đơn giản.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to machine code.
-3. And then the machine code runs, pretty fast.
+1. Bộ máy (nhúng nếu đó là trình duyệt) đọc ("phân tích cú pháp") script.
+2. Sau đó nó chuyển đổi ("biên dịch") script thành mã máy.
+3. Và khi mà chương trình chạy, chúng tương đối nhanh.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+Bộ máy áp dụng các tối ưu hóa ở mỗi bước của quá trình. Nó thậm chí theo dõi script đã biên dịch khi chạy, phân tích dữ liệu đi qua nó, và tối ưu hóa mã máy dựa trên kiến thức đó.
 ```
 
 ## What can in-browser JavaScript do?
@@ -53,7 +54,7 @@ For instance, in-browser JavaScript is able to:
 
 - Add new HTML to the page, change the existing content, modify styles.
 - React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
+- Send requests over the network to remote servers, download and upload files (so-called [AJAX](<https://en.wikipedia.org/wiki/Ajax_(programming)>) and [COMET](<https://en.wikipedia.org/wiki/Comet_(programming)>) technologies).
 - Get and set cookies, ask questions to the visitor, show messages.
 - Remember the data on the client-side ("local storage").
 
@@ -65,14 +66,16 @@ Examples of such restrictions include:
 
 - JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+  Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
 
-    There are ways to interact with the camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+  There are ways to interact with the camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+
 - Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other page if they come from different sites (from a different domain, protocol or port).
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and must contain special JavaScript code that handles it. We'll cover that in the tutorial.
+  This is called the "Same Origin Policy". To work around that, _both pages_ must agree for data exchange and must contain special JavaScript code that handles it. We'll cover that in the tutorial.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
+  This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
+
 - JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
 
 ![](limitations.svg)
@@ -81,13 +84,14 @@ Such limitations do not exist if JavaScript is used outside of the browser, for 
 
 ## What makes JavaScript unique?
 
-There are at least *three* great things about JavaScript:
+There are at least _three_ great things about JavaScript:
 
 ```compare
 + Full integration with HTML/CSS.
 + Simple things are done simply.
 + Supported by all major browsers and enabled by default.
 ```
+
 JavaScript is the only browser technology that combines these three things.
 
 That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
@@ -100,7 +104,7 @@ The syntax of JavaScript does not suit everyone's needs. Different people want d
 
 That's to be expected, because projects and requirements are different for everyone.
 
-So, recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+So, recently a plethora of new languages appeared, which are _transpiled_ (converted) to JavaScript before they run in the browser.
 
 Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
 
